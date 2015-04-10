@@ -417,6 +417,10 @@ def create():
             pip("-r %s/%s" % (env.proj_path, env.reqs_path))
         pip("gunicorn setproctitle south psycopg2 "
             "django-compressor python-memcached")
+
+	# patch inputstream
+	sudo("cp %s/project/deploy/inputstream.py %s/local/lib/python2.7/site-packages/html5lib/inputstream.py" % ((env.venv_path,) * 2))
+
         manage("createdb --noinput --nodata")
         python("from django.conf import settings;"
                "from django.contrib.sites.models import Site;"
