@@ -1,3 +1,4 @@
 html5lib==0.999
 Mezzanine==3.1.10
 drum==0.2.2
+feedparser==5.1.3
