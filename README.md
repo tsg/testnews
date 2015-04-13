@@ -1,4 +1,4 @@
-=Testnews
+# Testnews
 
 A simple HN / Reddit clone based on [Drum](https://github.com/stephenmcd/drum).
 
